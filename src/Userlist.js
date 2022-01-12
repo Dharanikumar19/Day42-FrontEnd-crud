@@ -10,7 +10,7 @@ function Userlist() {
 
     let fetchUsers = async () => {
         try {
-            let userdata = await axios.get("http://b29wd-node-crud-app.herokuapp.com/users")
+            let userdata = await axios.get("https://b29wd-node-crud-app.herokuapp.com/users")
             setuserlist(userdata.data)
         } catch (error) {
             console.log(error)
