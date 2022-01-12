@@ -20,7 +20,7 @@ function Userlist() {
         try {
             let result = window.confirm("Are you sure want to delete?")
             if (result) {
-                await axios.delete(`https://b29wd-node-crud-app.herokuapp.com/${id}`)
+                await axios.delete(`http://b29wd-node-crud-app.herokuapp.com/${id}`)
                 fetchUsers()
             }
         } catch (error) {
