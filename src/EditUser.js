@@ -7,7 +7,7 @@ function EditUser() {
     let params = useParams()
    
     useEffect(async function()  {
-        let userdata = await axios.get(`https://b29wd-node-crud-app.herokuapp.com/${params.id}`)
+        let userdata = await axios.get(`http://b29wd-node-crud-app.herokuapp.com/${params.id}`)
         formik.setValues(userdata.data)
         console.log(params)
     }, [])
@@ -20,7 +20,7 @@ function EditUser() {
         onSubmit: async (values) => {
            try {    
             delete values['_id'];
-            await axios.put(`https://b29wd-node-crud-app.herokuapp.com/${params.id}`,values)
+            await axios.put(`http://b29wd-node-crud-app.herokuapp.com/${params.id}`,values)
             navigate("/")
            } catch (error) {
                console.log(error)
