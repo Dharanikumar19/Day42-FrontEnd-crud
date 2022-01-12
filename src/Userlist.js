@@ -16,17 +16,34 @@ function Userlist() {
             console.log(error)
         }
     }
-    let handleDelete = async (id) => {
+    // let handleDelete = async (id) => {
+    //     try {
+    //         let result = window.confirm("Are you sure want to delete?")
+    //         if (result) {
+    //             await axios.delete(`https://b29wd-node-crud-app.herokuapp.com/${id}`)
+    //             fetchUsers()
+    //         }
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
+
+    const handleDelete = ( async (id) => {
         try {
-            let result = window.confirm("Are you sure want to delete?")
-            if (result) {
-                await axios.delete(`https://b29wd-node-crud-app.herokuapp.com/${id}`)
-                fetchUsers()
-            }
+          if(window.confirm('Are you sure want to delete')){
+          await fetch(`https://b29wd-node-crud-app.herokuapp.com/${id}`,{
+          method : "DELETE",
+          headers : {
+            "Content-type" : "application/json"
+          }
+        })}
         } catch (error) {
-            console.log(error)
+          console.log(error)
         }
-    }
+        fetchUsers()
+     })
+
+
     return (
         <>
             <br />
