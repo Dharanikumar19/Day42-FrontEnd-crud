@@ -10,7 +10,7 @@ function Userlist() {
 
     let fetchUsers = async () => {
         try {
-            let userdata = await axios.get("http://localhost:3000/users")
+            let userdata = await axios.get("https://b29wd-node-crud-app.herokuapp.com/users")
             setuserlist(userdata.data)
         } catch (error) {
             console.log(error)
@@ -20,7 +20,7 @@ function Userlist() {
         try {
             let result = window.confirm("Are you sure want to delete?")
             if (result) {
-                await axios.delete(`http://localhost:3000/user/${id}`)
+                await axios.delete(`https://b29wd-node-crud-app.herokuapp.com/${id}`)
                 fetchUsers()
             }
         } catch (error) {

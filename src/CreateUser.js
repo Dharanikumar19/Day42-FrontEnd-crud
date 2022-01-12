@@ -12,7 +12,7 @@ function CreateUser() {
         },
         onSubmit:async values => {
            try {
-            axios.post("http://localhost:3000/create-user",values)
+            axios.post("https://b29wd-node-crud-app.herokuapp.com/create-user",values)
             navigate("/")
            } catch (error) {
                console.log(error)
