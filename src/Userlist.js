@@ -20,7 +20,7 @@ function Userlist() {
         try {
             let result = window.confirm("Are you sure want to delete?")
             if (result) {
-                await axios.delete(`https://b29wd-node-crud-app.herokuapp.com/${id}`)
+                await axios.delete(`https://b29wd-node-crud-app.herokuapp.com/user/${id}`)
                 fetchUsers()
             }
         } catch (error) {
@@ -42,7 +42,7 @@ function Userlist() {
             </div>
 
 
-            <table class="table table-striped mt-3">
+            <table className="table table-striped mt-3">
                 <thead>
                     <tr>
 
