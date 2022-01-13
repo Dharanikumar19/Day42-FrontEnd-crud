@@ -19,7 +19,7 @@ function EditUser() {
         },
         onSubmit: async (values) => {
            try {    
-            delete values['_id'];
+            delete values._id;
             await axios.put(`https://b29wd-node-crud-app.herokuapp.com/${params.id}`,values)
             navigate("/")
            } catch (error) {

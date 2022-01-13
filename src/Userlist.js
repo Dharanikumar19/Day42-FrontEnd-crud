@@ -28,21 +28,6 @@ function Userlist() {
         }
     }
 
-    // const handleDelete = ( async (id) => {
-    //     try {
-    //       if(window.confirm('Are you sure want to delete')){
-    //       await fetch(`https://b29wd-node-crud-app.herokuapp.com/${id}`,{
-    //       method : "DELETE",
-    //       headers : {
-    //         "Content-type" : "application/json"
-    //       }
-    //     })}
-    //     } catch (error) {
-    //       console.log(error)
-    //     }
-    //     fetchUsers()
-    //  })
-
 
     return (
         <>
